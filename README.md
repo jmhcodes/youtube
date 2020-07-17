@@ -1,8 +1,8 @@
 # youtube_analytics
 This repo is in development
 
-### Goal 
-Pull relevant marketing analytics statistics from the YouTube, Twicth, Twitter, Instagram APIs to benefit indepenet YouTuber's and video game releases
+## Goal 
+*Pull relevant marketing analytics statistics from the YouTube, Twicth, Twitter, Instagram APIs to benefit indepenet YouTuber's and video game releases*
 
   ### Completed
   - Built ETL to store playlist in postgreDB from Youtube Data API
