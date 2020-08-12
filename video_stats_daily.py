@@ -113,7 +113,7 @@ def split_col_names(list_i):
 # In[4]:
 
 
-api_key = 'AIzaSyBCX58yBlqo_qGcQw173Wql8Q7B4ryRTkg'
+api_key = youtube_config.developerKey
 
 
 # In[5]:
@@ -127,7 +127,7 @@ def video_stats():
     api_service_name = "youtube"
     api_version = "v3"
     client_secrets_file = "C:\\Users\\joshu\\Desktop\\Master SQL for DS\\Youtube\\client_secret_918685201498-5i7tmml50eod473lig1pk3ov14kb0c30.apps.googleusercontent.com.json"
-    developerKey = "AIzaSyBCX58yBlqo_qGcQw173Wql8Q7B4ryRTkg"
+    developerKey = youtube_config.developerKey
     
     # Get credentials and create an API client
     #flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
