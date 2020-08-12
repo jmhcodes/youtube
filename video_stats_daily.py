@@ -246,8 +246,8 @@ final_video_stats = final_video_stats.rename(columns=dict(zip(final_video_stats.
 # In[15]:
 
 
-final_video_stats['date'] = datetime.now().strftime("%m-%d-%Y")
-final_video_stats['time'] = datetime.now().strftime("%H:%M:%S")
+final_video_stats['vid_date'] = datetime.now().strftime("%m-%d-%Y")
+final_video_stats['vid_time'] = datetime.now().strftime("%H:%M:%S")
 final_video_stats.rename(columns={'id':'resourceid'}, inplace=True)
 
 
