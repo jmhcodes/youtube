@@ -1,6 +1,6 @@
 # youtube_analytics
 This repo is in development
-tes push t
+
 ## Goal 
 *Pull relevant marketing analytics statistics from the YouTube, Twicth, Twitter, Instagram APIs to benefit indepenet YouTuber's and video game releases*
 
