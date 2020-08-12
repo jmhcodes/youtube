@@ -135,7 +135,7 @@ def video_stats():
     #credentials = flow.run_console()
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, developerKey=developerKey)
-    developerKey = "AIzaSyBCX58yBlqo_qGcQw173Wql8Q7B4ryRTkg"
+    developerKey = youtube_config.developerKey
     
     #request = youtube.videos().list(
     #        part="statistics",
