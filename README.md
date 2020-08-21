@@ -51,7 +51,7 @@ This repo is in development
 </head>
 <body>
 	<h1>Directory Tree</h1><p>
-	├── <a href=".//README.md">README.md</a>  <pre> <i>               <-This text is italic</i> <pre> <br>
+	├── <a href=".//README.md">README.md</a>  <pre> <i>               <-This text is italic</i> </pre> <br>
 	├── <a href=".//requirements.txt">requirements.txt</a><br>
 	├── <a href=".//notebooks/">notebooks</a><br>
 	│   ├── <a href=".//notebooks/video_playlist_ETL.ipynb">video_playlist_ETL.ipynb</a><br>
