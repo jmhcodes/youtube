@@ -1,6 +1,6 @@
 # youtube_analytics
 This repo is in development
-![Alt text](img/flow.jpg?raw=true "Title")
+![Alt text](img/flow.png?raw=true "Technology flow")
 
 ## Goal 
 *Build ETLs to pull marketing analytics statistics from the YouTube, Twitch, Twitter, Instagram APIs and perform analysis to benefit independent YouTuber's and video game releases*
