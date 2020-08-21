@@ -10,6 +10,7 @@ This repo is in development
 
   ### Currently
   - Collecting YouTube daily statistics 
+  - Building visualiztions with current datasets. Will use SQL queries and Python data viz.
 
   ### Up next 
   - Build Twitter ETL 
