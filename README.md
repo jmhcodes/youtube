@@ -53,19 +53,19 @@ This repo is in development
 <body>
 	<h1>Directory Tree</h1><p>
 	├── <a href=".//README.md">README.md</a> <br>	│
-	├── <a href=".//requirements.txt">requirements.txt</a>		    <i> <-The requirements file for reproducing the analysis environment </i> <br>
-	├── <a href=".//notebooks/">notebooks</a>			    <i> <-Jupyter notebooks. Explain code techniques used in etl</i> <br>
-	│   ├── <a href=".//notebooks/video_playlist_ETL.ipynb">video_playlist_ETL.ipynb</a>    <i> <-ETL import of unique videos from Youtube Data API to Postgres database</i> <br>
-	│   └── <a href=".//notebooks/video_stats_hourly_ETL.ipynb">video_stats_hourly_ETL.ipynb</a><i> <-ETL import of bi-hourly stats of listed videos in pg playlists table</i> <br>
-	├── <a href=".//src/">src</a>				    <i> <-Source code used for this project</i> <br>
-	│   ├── <a href=".//src/data/">data</a>			    <i> <-psycopg2 SQL scripts to generate data to visualize</i> <br>
-	│   ├── <a href=".//src/etl/">etl</a>			    <i> <-folder of ETL scripts decribed in the notebooks</i> <br>
-	│   │   ├── <a href=".//src/etl/video_playlist_ETL.py">video_playlist_ETL.py</a><br>
-	│   │   └── <a href=".//src/etl/video_stats_hourly_ETL.py">video_stats_hourly_ETL.py</a><br>
-	│   └── <a href=".//src/visulization/">visulization</a> 		    <i> <-visualizations of hourly stats and analytics on key times to upload </i> <br>
-	│   &nbsp;&nbsp;&nbsp; └── <a href=".//src/visulization/data_viz.ipynb">data_viz.ipynb</a><br>
-	├── youtube_config.py		<i> <-personal config file with YouTube Data API credentials and Postgres address </i><br>
-	└── youtube_env			<i> <-virtual env used to run all scripts </i> <br>
+	├── <a href=".//requirements.txt">requirements.txt</a>		    <i> <-The requirements file for reproducing the analysis environment </i> <br>	│
+	├── <a href=".//notebooks/">notebooks</a>			    <i> <-Jupyter notebooks. Explain code techniques used in etl</i> <br>	│
+	│   ├── <a href=".//notebooks/video_playlist_ETL.ipynb">video_playlist_ETL.ipynb</a>    <i> <-ETL import of unique videos from Youtube Data API to Postgres database</i> <br>	│
+	│   └── <a href=".//notebooks/video_stats_hourly_ETL.ipynb">video_stats_hourly_ETL.ipynb</a><i> <-ETL import of bi-hourly stats of listed videos in pg playlists table</i> <br>	│
+	├── <a href=".//src/">src</a>				    <i> <-Source code used for this project</i> <br>	│
+	│   ├── <a href=".//src/data/">data</a>			    <i> <-psycopg2 SQL scripts to generate data to visualize</i> <br>	│
+	│   ├── <a href=".//src/etl/">etl</a>			    <i> <-folder of ETL scripts decribed in the notebooks</i> <br>	│
+	│   │   ├── <a href=".//src/etl/video_playlist_ETL.py">video_playlist_ETL.py</a><br>	│
+	│   │   └── <a href=".//src/etl/video_stats_hourly_ETL.py">video_stats_hourly_ETL.py</a><br>	│
+	│   └── <a href=".//src/visulization/">visulization</a> 		    <i> <-visualizations of hourly stats and analytics on key times to upload </i> <br>	│
+	│   &nbsp;&nbsp;&nbsp; └── <a href=".//src/visulization/data_viz.ipynb">data_viz.ipynb</a><br>	│
+	├── youtube_config.py		<i> <-personal config file with YouTube Data API credentials and Postgres address </i><br>	│
+	└── youtube_env			<i> <-virtual env used to run all scripts </i> <br>	│
 	<br><br>
 	</pre>
 
