@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[3]:
 
 
 from pandas import json_normalize
@@ -18,10 +18,16 @@ from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from psycopg2 import sql, connect
 import psycopg2
 import pandas as pd
+
+#import credentials (apiKey, database host address, client secret file) from your youtube_config.py
+import sys
+sys.path.insert(1, '../../')
+from youtube_config import developerKey
+from youtube_config import host
 scopes = ["https://www.googleapis.com/auth/youtube.readonly"]
 
 
-# In[2]:
+# In[4]:
 
 
 def get_cols(table = None):
@@ -83,7 +89,7 @@ def get_cols(table = None):
     return columns
 
 
-# In[3]:
+# In[5]:
 
 
 def split_col_names(list_i):
@@ -110,38 +116,24 @@ def split_col_names(list_i):
     return temp_list
 
 
-# In[4]:
+# In[6]:
 
 
-api_key = youtube_config.developerKey
-
-
-# In[5]:
-
-
-def video_stats():
+def video_stats(developerKey=developerKey):
     # Disable OAuthlib's HTTPS verification when running locally.
     # *DO NOT* leave this option enabled in production.
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "0"
 
     api_service_name = "youtube"
     api_version = "v3"
-    client_secrets_file = "C:\\Users\\joshu\\Desktop\\Master SQL for DS\\Youtube\\client_secret_918685201498-5i7tmml50eod473lig1pk3ov14kb0c30.apps.googleusercontent.com.json"
-    developerKey = youtube_config.developerKey
     
     # Get credentials and create an API client
-    #flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
-    #    client_secrets_file, scopes)
-    #credentials = flow.run_console()
+
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, developerKey=developerKey)
-    developerKey = youtube_config.developerKey
+    developerKey = developerKey
     
-    #request = youtube.videos().list(
-    #        part="statistics",
-    #        id=item)
-    
-    
+
     r_old_stats = []
     for item in yt_list: 
         request = youtube.videos().list(
@@ -153,17 +145,17 @@ def video_stats():
     return r_old_stats
 
 
-# In[6]:
+# In[7]:
 
 
-# create a global string for the PostgreSQL db name
+# create a global string to connect to PostgreSQL db
 db_name = "youtube_test"
 user = "postgres"
-host = "192.168.1.206"
+host = host
 password = "mypw"
 
 
-# In[7]:
+# In[8]:
 
 
 #Set up the connection string to your db
@@ -177,7 +169,7 @@ try:
     )
 
     # print the connection if successful
-    print ("psycopg2 connection:\n", str(conn).split('; ')[1])
+    print ("psycopg2 connection:\n", str(conn).split(' ')[5:8], "host=host", str(conn).split(',')[1] )
     cur = conn.cursor()
 
 except Exception as err:
@@ -185,7 +177,7 @@ except Exception as err:
     conn = None
 
 
-# In[8]:
+# In[9]:
 
 
 try: 
@@ -201,49 +193,51 @@ except Exception as err:
     print ("psycopg2 connect() ERROR:", err)
 
 
-# In[9]:
+# In[10]:
 
 
+#YouTube Data API only allows queries of 50 resources at a time
+#split resourceid's in lists of 50 videos. 
 math.ceil(len(sql_df)/50)
 yt_list = []
 i = 0 
 while i < math.ceil(len(sql_df)/50): 
-    strlist = ",".join(sql_df['resourceid'][i*50:(i+1)*50])
+    strlist = ",".join(sql_df['resourceid'][i * 50: (i + 1) * 50])
     yt_list.append(strlist)
     i = i + 1
-
-
-# In[10]:
-
-
-video_stats_df = video_stats()
 
 
 # In[11]:
 
 
-final_video_stats = pd.json_normalize(video_stats_df)
+video_stats_df = video_stats()
 
 
 # In[12]:
 
 
-final_video_stats.drop(['kind','statistics.favoriteCount'],axis = 1, inplace = True)
+final_video_stats = pd.json_normalize(video_stats_df)
 
 
 # In[13]:
 
 
-new_cols = split_col_names(final_video_stats.columns)
+final_video_stats.drop(['kind','statistics.favoriteCount'],axis = 1, inplace = True)
 
 
 # In[14]:
 
 
-final_video_stats = final_video_stats.rename(columns=dict(zip(final_video_stats.columns, new_cols)))[new_cols]
+new_cols = split_col_names(final_video_stats.columns)
 
 
 # In[15]:
+
+
+final_video_stats = final_video_stats.rename(columns=dict(zip(final_video_stats.columns, new_cols)))[new_cols]
+
+
+# In[16]:
 
 
 final_video_stats['vid_date'] = datetime.now().strftime("%m-%d-%Y")
@@ -251,18 +245,24 @@ final_video_stats['vid_time'] = datetime.now().strftime("%H:%M:%S")
 final_video_stats.rename(columns={'id':'resourceid'}, inplace=True)
 
 
-# In[16]:
+# In[17]:
 
 
 table_name = 'video_stats'
 from sqlalchemy import create_engine
 engine = create_engine("postgresql://postgres:mypw@192.168.1.206/youtube_test")
 conn = engine.connect()
+
+
+# In[18]:
+
+
 final_video_stats.to_sql(name=table_name,con=conn,if_exists='append', index=False)
-
-
-# In[17]:
-
-
 conn.close()
+
+
+# In[ ]:
+
+
+
 
