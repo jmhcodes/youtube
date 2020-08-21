@@ -52,11 +52,11 @@ This repo is in development
 <body>
 	<h1>Directory Tree</h1><p>
 	├── <a href=".//README.md">README.md</a> <br>
-	├── <a href=".//requirements.txt">requirements.txt</a>		<i> <-The requirements file for reproducing the analysis environment </i> <br>
-	├── <a href=".//notebooks/">notebooks</a>			  <i> <-Jupyter notebooks. Copies of etl.py files to dicuss techniques and digest code</i> <br>
-	│   ├── <a href=".//notebooks/video_playlist_ETL.ipynb">video_playlist_ETL.ipynb</a>   <i> <-Explains ETL import of unique videos/playlists from Youtube Data API to PostGres database</i> <br>
-	│   └── <a href=".//notebooks/video_stats_hourly_ETL.ipynb">video_stats_hourly_ETL.ipynb</a><i> <-Explains ETL import of hourly stats from the videos listed in the playlists pg table</i> <br>
-	├── <a href=".//src/">src</a>					<i> <-Source code used for this project</i> <br>
+	├── <a href=".//requirements.txt">requirements.txt</a>		    <i> <-The requirements file for reproducing the analysis environment </i> <br>
+	├── <a href=".//notebooks/">notebooks</a>			    <i> <-Jupyter notebooks. Explain code techniques used in etl</i> <br>
+	│   ├── <a href=".//notebooks/video_playlist_ETL.ipynb">video_playlist_ETL.ipynb</a>    <i> <-ETL import of unique videos from Youtube Data API to Postgres database</i> <br>
+	│   └── <a href=".//notebooks/video_stats_hourly_ETL.ipynb">video_stats_hourly_ETL.ipynb</a><i> <-ETL import of hourly stats of videos in playlists table</i> <br>
+	├── <a href=".//src/">src</a>				<i> <-Source code used for this project</i> <br>
 	│   ├── <a href=".//src/data/">data</a>			<i> <-psycopg2 SQL scripts to generate data to visualize</i> <br>
 	│   ├── <a href=".//src/etl/">etl</a>			<i> <-psycopg2 SQL scripts to generate data to visualize</i> <br>
 	│   │   ├── <a href=".//src/etl/video_playlist_ETL.py">video_playlist_ETL.py</a><br>
