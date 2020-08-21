@@ -16,7 +16,7 @@ This repo is in development
   - Track a couple friends YouTube channel uploads and stats
   - Track my favorite YouTubers channel uploads and stats
   
-  
+
     ### On the board
     - Build Twitch ETL 
     - Build Instagram ETL 
@@ -29,8 +29,6 @@ This repo is in development
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <meta name="Author" content="Made by 'tree'">
  <meta name="GENERATOR" content="$Version: $ tree v1.8.0 (c) 1996 - 2018 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
- <title>Directory Tree</title>
- <style type="text/css">
   <!-- 
   BODY { font-family : ariel, monospace, sans-serif; }
   P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: black; background-color: transparent;}
@@ -54,14 +52,11 @@ This repo is in development
 <body>
 	<h1>Directory Tree</h1><p>
 	<a href="./">./</a><br>
+	├── <a href=".//README.md">README.md</a><br>
+	├── <a href=".//requirements.txt">requirements.txt</a><br>
 	├── <a href=".//notebooks/">notebooks</a><br>
 	│   ├── <a href=".//notebooks/video_playlist_ETL.ipynb">video_playlist_ETL.ipynb</a><br>
 	│   └── <a href=".//notebooks/video_stats_hourly_ETL.ipynb">video_stats_hourly_ETL.ipynb</a><br>
-	├── <a href=".//__pycache__/">__pycache__</a><br>
-	│   └── <a href=".//__pycache__/youtube_config.cpython-38.pyc">youtube_config.cpython-38.pyc</a><br>
-	├── <a href=".//README.md">README.md</a><br>
-	├── <a href=".//requirements.txt">requirements.txt</a><br>
-	├── <a href=".//result.html">result.html</a><br>
 	├── <a href=".//src/">src</a><br>
 	│   ├── <a href=".//src/data/">data</a><br>
 	│   ├── <a href=".//src/etl/">etl</a><br>
