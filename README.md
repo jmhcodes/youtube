@@ -51,9 +51,7 @@ This repo is in development
 <body>
 	<h1>Directory Tree</h1><p>
 	├── <a href=".//README.md">README.md</a> <br>
-	├── <a href=".//requirements.txt">requirements.txt</a> <pre> pre {
-  tab-width: 2;
-} </pre><br>
+	├── <a href=".//requirements.txt">requirements.txt</a> <dd> </dd> <dd> </dd> words words words <br>
 	├── <a href=".//notebooks/">notebooks</a> &nbsp;&nbsp;&nbsp; <i> <-Jupyter notebooks. Copies of etl.py files to dicuss techniques and digest code</i> <br>
 	│   ├── <a href=".//notebooks/video_playlist_ETL.ipynb">video_playlist_ETL.ipynb</a> &nbsp;&nbsp;&nbsp; <i> <-Explains ETL import of unique videos/playlists from Youtube Data API to PostGres database</i> <br>
 	│   └── <a href=".//notebooks/video_stats_hourly_ETL.ipynb">video_stats_hourly_ETL.ipynb</a> &nbsp;&nbsp;&nbsp; <i> <-Explains ETL import of hourly stats from the videos listed in the playlists pg table</i> <br>
