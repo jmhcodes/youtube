@@ -52,33 +52,20 @@ This repo is in development
 <body>
 	<h1>Directory Tree</h1><p>
 	├── <a href=".//README.md">README.md</a> <br>
-	├── <a href=".//requirements.txt">requirements.txt</a>                              words words words <br>
-	├── <a href=".//notebooks/">notebooks</a> &nbsp;&nbsp;&nbsp; <i> <-Jupyter notebooks. Copies of etl.py files to dicuss techniques and digest code</i> <br>
-	│   ├── <a href=".//notebooks/video_playlist_ETL.ipynb">video_playlist_ETL.ipynb</a> &nbsp;&nbsp;&nbsp; <i> <-Explains ETL import of unique videos/playlists from Youtube Data API to PostGres database</i> <br>
-	│   └── <a href=".//notebooks/video_stats_hourly_ETL.ipynb">video_stats_hourly_ETL.ipynb</a> &nbsp;&nbsp;&nbsp; <i> <-Explains ETL import of hourly stats from the videos listed in the playlists pg table</i> <br>
-	├── <a href=".//src/">src</a> &nbsp;&nbsp;&nbsp; <i> <-Source code used for this project</i> <br>
-	│   ├── <a href=".//src/data/">data</a> &nbsp;&nbsp;&nbsp; <i> <-psycopg2 SQL scripts to generate data to visualize</i> <br>
-	│   ├── <a href=".//src/etl/">etl</a> &nbsp;&nbsp;&nbsp; <i> <-psycopg2 SQL scripts to generate data to visualize</i> <br>
+	├── <a href=".//requirements.txt">requirements.txt</a>			<i> <-The requirements file for reproducing the analysis environment </i> <br>
+	├── <a href=".//notebooks/">notebooks</a>			<i> <-Jupyter notebooks. Copies of etl.py files to dicuss techniques and digest code</i> <br>
+	│   ├── <a href=".//notebooks/video_playlist_ETL.ipynb">video_playlist_ETL.ipynb</a>	<i> <-Explains ETL import of unique videos/playlists from Youtube Data API to PostGres database</i> <br>
+	│   └── <a href=".//notebooks/video_stats_hourly_ETL.ipynb">video_stats_hourly_ETL.ipynb</a>	<i> <-Explains ETL import of hourly stats from the videos listed in the playlists pg table</i> <br>
+	├── <a href=".//src/">src</a>	<i> <-Source code used for this project</i> <br>
+	│   ├── <a href=".//src/data/">data</a>		<i> <-psycopg2 SQL scripts to generate data to visualize</i> <br>
+	│   ├── <a href=".//src/etl/">etl</a>		<i> <-psycopg2 SQL scripts to generate data to visualize</i> <br>
 	│   │   ├── <a href=".//src/etl/video_playlist_ETL.py">video_playlist_ETL.py</a><br>
 	│   │   └── <a href=".//src/etl/video_stats_hourly_ETL.py">video_stats_hourly_ETL.py</a><br>
-	│   └── <a href=".//src/visulization/">visulization</a><br>
+	│   └── <a href=".//src/visulization/">visulization</a> <i> <-visualizations of hourly stats and analytics on key times to upload </i> <br>
 	│   &nbsp;&nbsp;&nbsp; └── <a href=".//src/visulization/data_viz.ipynb">data_viz.ipynb</a><br>
-	├── <a href=".//youtube_config.py">youtube_config.py</a><br>
-	└── <a href=".//youtube_env/">youtube_env</a><br>
+	├── <a href=".//youtube_config.py">youtube_config.py</a>	<i> <-personal config file with YouTube Data API credentials and Postgres address </i><br>
+	└── <a href=".//youtube_env/">youtube_env</a> 	<i> <-virtual env used to run all scripts </i> <br>
 	<br><br>
-	</p>
-	<p>
-	<br><br>
-	</p>
-	<hr>
-	<p class="VERSION">
-		 tree v1.8.0 © 1996 - 2018 by Steve Baker and Thomas Moore <br>
-		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
-		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
-		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
-	</p>
-</body>
-</html>
 	</pre>
 
 
