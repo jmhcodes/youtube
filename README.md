@@ -52,7 +52,7 @@ This repo is in development
 </head>
 <body>
 	<h1>Directory Tree</h1><p>
-	├── <a href=".//README.md">README.md</a> <br>│
+	├── <a href=".//README.md">README.md</a> <br>	│
 	├── <a href=".//requirements.txt">requirements.txt</a>		    <i> <-The requirements file for reproducing the analysis environment </i> <br>
 	├── <a href=".//notebooks/">notebooks</a>			    <i> <-Jupyter notebooks. Explain code techniques used in etl</i> <br>
 	│   ├── <a href=".//notebooks/video_playlist_ETL.ipynb">video_playlist_ETL.ipynb</a>    <i> <-ETL import of unique videos from Youtube Data API to Postgres database</i> <br>
