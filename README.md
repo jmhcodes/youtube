@@ -61,10 +61,10 @@ This repo is in development
 	│   ├── <a href=".//src/etl/">etl</a>			    <i> <-psycopg2 SQL scripts to generate data to visualize</i> <br>
 	│   │   ├── <a href=".//src/etl/video_playlist_ETL.py">video_playlist_ETL.py</a><br>
 	│   │   └── <a href=".//src/etl/video_stats_hourly_ETL.py">video_stats_hourly_ETL.py</a><br>
-	│   └── <a href=".//src/visulization/">visulization</a> 		        <i> <-visualizations of hourly stats and analytics on key times to upload </i> <br>
+	│   └── <a href=".//src/visulization/">visulization</a> 		    <i> <-visualizations of hourly stats and analytics on key times to upload </i> <br>
 	│   &nbsp;&nbsp;&nbsp; └── <a href=".//src/visulization/data_viz.ipynb">data_viz.ipynb</a><br>
-	├── youtube_config.py					    <i> <-personal config file with YouTube Data API credentials and Postgres address </i><br>
-	└── youtube_env						    <i> <-virtual env used to run all scripts </i> <br>
+	├── youtube_config.py			<i> <-personal config file with YouTube Data API credentials and Postgres address </i><br>
+	└── youtube_env				<i> <-virtual env used to run all scripts </i> <br>
 	<br><br>
 	</pre>
 
