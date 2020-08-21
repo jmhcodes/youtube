@@ -65,7 +65,7 @@ This repo is in development
 	│   └── <a href=".//src/visulization/">visulization</a> 		    <i> <-visualizations of hourly stats and analytics on key times to upload </i> <br>	│
 	│   &nbsp;&nbsp;&nbsp; └── <a href=".//src/visulization/data_viz.ipynb">data_viz.ipynb</a><br>	│
 	├── youtube_config.py		<i> <-personal config file with YouTube Data API credentials and Postgres address </i><br>	│
-	└── youtube_env			<i> <-virtual env used to run all scripts </i> <br>	│
+	└── youtube_env			<i> <-virtual env used to run all scripts </i> <br>	
 	<br><br>
 	</pre>
 
